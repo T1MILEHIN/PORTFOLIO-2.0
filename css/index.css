@@ -1,0 +1,1227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* overflow-x: hidden; */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 9vw;
+    box-shadow: 3px 3px 5px 2px silver;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    background-color: white;
+}
+
+header>div {
+    flex: 1;
+}
+
+header>div:last-child {
+    display: flex;
+    gap: 2vw;
+    justify-content: end;
+    align-items: center;
+}
+
+nav.menu ul {
+    white-space: nowrap;
+}
+
+
+nav.menu ul li {
+    display: inline-block;
+    padding: .8rem;
+    position: relative;
+
+}
+
+nav.menu ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: orangered;
+    width: 0px;
+    transition: width 500ms ease-in-out;
+}
+
+nav.menu ul li:hover::after {
+    width: 100%;
+}
+
+nav.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+input#check:checked ~ header>div:last-child>label>i {
+    color: black;
+    border: 1px solid red;
+}
+
+header>div:last-child>label:first-child i {
+    display: block;
+    font-size: 1.5rem;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+    outline: 5px solid white;
+    outline-offset: -4px;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+input#night:checked ~ header>div:last-child>label:first-child i {
+    color: white;
+    background-color: #131617;
+    outline: 5px solid #131617;
+}
+
+
+header>div:last-child>label:nth-child(2) {
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* display: none; */
+    
+}
+
+header>div:last-child>label:last-child i {
+    display: none;
+    
+}
+
+input#night {
+    display: none;
+}
+
+header, section, footer, img,
+header>div:last-child>label:first-child i ,
+section.award>div:last-child img:first-child,
+section.skill>div:first-child img,
+section.testimony>div:last-child>div>div,
+section.landing>div:first-child h1,
+section.landing>div:first-child p:nth-child(3),
+section.service>div:first-child h1,
+section.skill>div:last-child h1,
+section.skill>div:last-child>div.rate>div,
+section.award>div>div:first-child h1,
+section.testimony>div:last-child>h1,
+section.partner>div>div:first-child>h1,
+footer>div:first-child h1,
+footer>div:last-child>div:last-child form>div input,
+footer>div:last-child>div:last-child form>div textarea,
+div.copyright {
+    transition: all 400ms ease-in-out;
+}
+
+input#night:checked ~ header {
+    background: #131617;
+    color: white;
+    box-shadow: .5px .5px .5px .5px silver;
+}
+
+input#night:checked ~header>div nav.menu ul li {
+    background-color: rgb(255, 255, 255);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+input#night:checked ~ section.landing,
+input#night:checked ~ section.skill,
+input#night:checked ~ section.testimony {
+    background: #131617;
+    color: white;
+}
+
+input#night:checked ~ section {
+    background-color: black;
+    color: white;
+}
+
+input#night:checked ~ section.landing>div:first-child h1,
+input#night:checked ~ section.landing>div:first-child p:nth-child(3),
+input#night:checked ~ section.service>div:first-child h1, 
+input#night:checked ~ section.skill>div:last-child h1, 
+input#night:checked ~ section.award>div>div:first-child h1,
+input#night:checked ~ section.testimony>div:last-child>h1,
+input#night:checked ~ section.partner>div>div:first-child>h1,
+input#night:checked ~ footer>div:first-child h1 {
+    color: white;
+}
+
+input#night:checked ~ footer>div:last-child>div:last-child form>div input,
+input#night:checked ~ footer>div:last-child>div:last-child form>div textarea {
+    background-color: #0b0d0e;
+} 
+
+input#night:checked ~section.landing>div:last-child p,
+input#night:checked ~section.landing>div:last-child p i  {
+    background-color: orangered;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+input#night:checked ~section.service>div>div:last-child a {
+    background-color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+input#night:checked ~section.skill>div:first-child img {
+    background-color: #131617;
+}
+input#night:checked ~section.award>div:last-child img {
+    background-color: black;
+    color: black;
+}
+input#night:checked ~section.testimony>div:last-child>div>div {
+    background: #131617;
+}
+input#night:checked ~ footer {
+    background: #131617;
+    color: white;
+}
+input#night:checked ~ div {
+    background: black;
+    color: white;
+}
+input#night:checked ~ div.john {
+    background: black;
+    color: white;
+}
+
+input#night:checked ~ nav.side {
+    color: black;
+}
+
+nav.side {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    width: 30vw;
+    height: 100vh;
+    text-align: left;
+    padding: 5%;
+    background-color: gainsboro;
+}
+
+
+nav.side ul li {
+    font-size: 1.3rem;
+}
+
+nav.side::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 30vw;
+    bottom: -20vw;
+    left: -68.75vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all 100ms ease-in-out;
+}
+
+
+nav.side>ul {
+    list-style: none;
+}
+
+input#check, input#nav {
+    display: none;
+}
+
+input#check:checked ~ nav.side {
+    right: 0;
+}
+
+nav.side ul li img {
+    width: 20vw;
+}
+
+nav.side ul li:first-child {
+    margin: -11vh 0 1vh 14.5vw;
+    font-size: 3rem;
+    cursor: pointer;
+    float: right;
+}
+
+nav.side ul li:first-child label {
+    cursor: pointer;
+}
+
+nav.side ul li:nth-child(2) {
+    font-size: 2.5rem;
+}
+
+nav.side ul li:last-child {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin: 2vh 0;
+    font-size: 3rem;
+    color: orangered;
+}
+
+section.landing {
+    padding: 25vh 9vw 0;
+}
+
+section.landing>div {
+    text-align: center; 
+    position: relative;
+}
+
+section.landing>div p:first-child {
+    color: orangered;
+    font-size: 1.5rem;
+}
+
+section.landing>div:last-child p {
+    transform: rotate(90deg);
+    color: rgba(0, 0, 0, 0.781);
+    position: absolute;
+    right: -7.5vw;
+    bottom: 30vh;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+}
+
+section.landing>div:last-child p i {
+    font-size: 1.7rem;
+    margin: 0 5px;
+    color: black;
+    transform: rotate(270deg);
+}
+
+section.landing>div:last-child p i:hover {
+    color: orangered;
+}
+
+section.landing>div h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgb(37, 37, 87);
+}
+
+section.landing>div h1 span {
+    background-color: orangered;
+    color: white;
+}
+
+section.landing>div p:nth-child(3) {
+    color: rgb(37, 37, 87);
+    font-size: 1.2rem;
+}
+
+section.landing>div p:nth-child(3) span {
+    font-weight: 900;
+}
+
+section.landing>div img {
+    width: 50vw;
+}
+
+section.service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1vw;
+    padding: 15vh 9vw;
+    background-color: gainsboro;
+    align-items: center;
+}
+
+section.service>div:first-child p {
+    font-size: 1.2rem;
+}
+
+section.service>div:first-child p:first-child {
+    color: orangered;
+}
+
+section.service>div:first-child p:nth-child(3) {
+    color: gray;
+    margin: 2vh 0;
+}
+
+section.service>div:first-child h1 {
+    font-size: 2.2rem;
+    margin: 1vh 0;
+    color: rgb(37, 37, 87);
+}
+
+section.service>div:last-child img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+section.service>div ul {
+    list-style: none;
+    line-height: 2;
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+section.service>div>ul li {
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    margin: 2vh 0;
+}
+
+section.service>div>ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: .5vh;
+    background-color: orangered;
+    width: 0px;
+    transition: all 500ms ease-in-out;
+}
+
+section.service>div>ul li:hover::after {
+    width: 100%;
+    border-radius: 5px;
+}
+
+section.service>div>div:last-child a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: fit-content;
+}
+
+section.service>div>div:last-child a:hover {
+    gap: 10px;
+}
+
+section.service>div>div:last-child a i {
+    font-size: 2rem;
+    color: orangered;
+}
+
+section.skill {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1vw;
+    padding: 10vh 9vw;
+    align-items: center;
+}
+
+section.skill>div:first-child {
+    position: relative;
+    background-color: white;
+}
+
+img.file, img.file1, img.file2 {
+    position: absolute;
+    width: 20%;
+}
+
+img.file {
+    left: 1%;
+    background-color: white;
+    width: 30%;
+    padding: 4%;
+    border-radius: 20px;
+    /* box-shadow: 1px 1px 10px 1px gainsboro; */
+    box-shadow: .5px .5px 1px 1.5px gray;
+}
+
+img.file1 {
+    right: 10%;
+    width: 20%;
+    padding: 4%;
+    background-color: white;
+    border-radius: 20px;
+    /* box-shadow: 1px 1px 10px 1px gainsboro; */
+    box-shadow: .5px .5px 1px 1.5px gray;
+}
+
+img.file2 {
+    bottom: -10%;
+    left: 20%;
+    width: 35%;
+    background-color: white;
+    padding: 4%;
+    border-radius: 20px;
+    /* box-shadow: 0px 5px 10px 2px gainsboro; */
+    box-shadow: .5px .5px 1px 1.5px gray;
+}
+
+section.skill>div:first-child img:first-child {
+    width: 100%;
+}
+
+section.skill>div:last-child>p:first-child {
+    color: orangered;
+    font-size: 1.2rem;
+}
+
+section.skill>div:last-child>h1 {
+    font-size: 2.2rem;
+    margin: 1vh 0;
+    color: rgb(37, 37, 87);
+}
+
+section.skill>div:last-child>p:nth-child(3) {
+    color: gray;
+    font-size: 1.2rem;
+    margin: 2vh 0;
+}
+
+div.rate {
+    line-height: 3;
+}
+
+div.rate p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+input#night:checked ~ section.skill>div:last-child>div.rate>div {
+    background-color: #0b0d0e;
+}
+
+div.rate>div {
+    width: 100%;
+    background-color: #f4f4f4;
+    height: 1vh;
+    border-radius: 30px;
+}
+
+div.rate>div:nth-child(2) div {
+    height: 1vh;
+    background-color: #74a8d5;
+    width: 80%;
+    border-radius: 30px 0 0 30px;
+}
+
+div.rate>div:nth-child(4) div {
+    height: 1vh;
+    background-color: #74a8d5;
+    width: 90%;
+    border-radius: 30px 0 0 30px;
+}
+
+div.rate>div:nth-child(6) div {
+    height: 1vh;
+    background-color: #74a8d5;
+    width: 50%;
+    border-radius: 30px 0 0 30px;
+}
+
+div.rate>div:nth-child(8) div {
+    height: 1vh;
+    background-color: #74a8d5;
+    width: 70%;
+    border-radius: 30px 0 0 30px;
+}
+
+section.award {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1vw;
+    padding: 15vh 9vw;
+    align-items: center;
+    background-color: gainsboro;
+}
+
+section.award>div div:first-child p:first-child {
+    color: orangered;
+    font-size: 1.2rem;
+}
+
+section.award>div div:first-child h1 {
+    font-size: 2.2rem;
+    margin: 1vh 0;
+    color: rgb(37, 37, 87);
+}
+
+section.award>div div:first-child p:nth-child(3) {
+    color: gray;
+    font-size: 1.2rem;
+    margin: 2vh 0;
+}
+
+section.award>div>div>div p:first-child{
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+section.award>div>div>div p:last-child {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+section.award>div div img {
+    width: 150px;
+}
+
+section.award>div>div:not(section.award>div div:first-child) {
+    display: flex;
+    gap: 2vw;
+    align-items: center; 
+}
+
+section.award>div:last-child {
+    position: relative;
+}
+
+section.award>div:last-child img:first-child {
+    width: 100%;
+    background-color: gainsboro;
+}
+
+img.award, img.award1, img.award2 {
+    position: absolute;
+    width: 20%;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: .5px .5px 1px 1px rgb(245, 244, 244);
+}
+
+img.award {
+    left: 1%;
+    width: 35%;
+    padding: 4%;
+    top: -15%;
+}
+
+img.award1 {
+    right: 0;
+    width: 30%;
+    padding: 5%;
+    top: -10%;
+}
+
+img.award2 {
+    bottom: -15%;
+    left: 11%;
+    width: 35%;
+    padding: 6%;
+}
+
+section.testimony {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4vw;
+    padding: 15vh 9vw;
+    align-items: center;
+}
+
+section.testimony>div:first-child img {
+    width: 100%;
+}
+
+section.testimony>div:last-child>p {
+    color: orangered;
+    font-size: 1.2rem;
+}
+
+div.clients>div>p {
+    font-size: 1.4rem;
+    color: gray;
+}
+
+div.clients>div>p span {
+    font-size:xx-large;
+    color: orangered;
+}
+
+div.clients>div div img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+section.testimony>div:last-child>h1 {
+    font-size: 2rem;
+    margin: 1vh 0;
+    color: rgb(37, 37, 87);
+}
+
+div.info {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    font-size: 1.2rem;
+}
+
+div.clients {
+    /* border: 4px solid burlywood; */
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 60.7vh;
+    overflow: hidden;
+    position: relative;
+}
+
+div.julie, div.roy,div.timi, div.laura {
+    position: absolute;
+    bottom: -50rem;
+}
+
+div.clients>div {
+    height: auto;
+    background-color: white;
+    transition: all 1s ease-in-out;
+}
+
+/* div.clients>div:nth-child(4) {
+    border: 2px solid purple;
+}
+div.clients>div:nth-child(6) {
+    border: 2px solid greenyellow;
+}
+div.clients>div:nth-child(8) {
+    border: 2px solid orangered;
+}
+div.clients>div:nth-child(10) {
+    border: 2px solid blue;
+} */
+
+input[type="radio"] {
+    display: none;
+}
+
+div.controls {
+    bottom: 0;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scaleY(0);
+    transform-origin: bottom ;
+    transition: .2s;
+}
+
+section.testimony>div:last-child:hover div.controls {
+    transform: scaleY(1);
+}
+
+div.controls>label {
+    height: 25px;
+    width: 25px; 
+    background: gainsboro;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+div.controls>label:hover {
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.5) inset,
+    0px 0px 0px 3px white;
+}
+
+input#radio2:checked ~ div.julie {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+input#radio3:checked ~ div.roy {
+    bottom: 0;
+}
+
+input#radio4:checked ~ div.timi {
+    bottom: 0;
+}
+
+input#radio5:checked ~ div.laura {
+    bottom: 0;
+}
+
+section.partner {
+    background-color: gainsboro;
+}
+
+section.partner>div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1vw;
+    padding: 15vh 9vw;
+    align-items: center;
+    justify-content: center;
+}
+
+section.partner>div>div:first-child>p:first-child {
+    color: orangered;
+    font-size: 1.2rem;
+}
+
+section.partner>div>div:first-child>h1 {
+    font-size: 2.2rem;
+    margin: 1vh 0;
+    color: rgb(37, 37, 87);
+}
+
+section.partner>div>div:first-child>p:nth-child(3) {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+div.collabo>div {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    /* margin: 2vh 0; */
+}
+
+div.collabo>div h1 {
+    font-size: 3rem;
+    color: rgb(122, 122, 255);
+    width: 25%;
+}
+
+div.collabo>div>div p:first-child {
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+div.collabo>div>div p:last-child {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+section.partner>div>div:last-child {
+    display: grid;
+    grid-template-columns: repeat(12, 2fr);
+    gap: 1vw;
+    height: 100%;
+    width: 100%;
+}
+
+section.partner>div>div:last-child img {
+    grid-column: span 4;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    /* box-shadow: 5px 5px 20px 10px rgb(187, 187, 187); */
+}
+
+footer {
+    padding: 5vh 9vw;
+}
+
+footer>div:first-child {
+    text-align: center;
+    line-height: 2;
+}
+
+footer>div:first-child p:first-child {
+    color: orangered;
+    font-size: 1.2rem;
+}
+
+footer>div:first-child h1 {
+    font-size: 2.2rem;
+    color: rgb(37, 37, 87);
+}
+
+footer>div:first-child p:nth-child(3) {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+footer>div.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2vw;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+div.contact>div:first-child p {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+div.contact>div:first-child h3 {
+    line-height: 3;
+}
+
+div.hero-form {
+    width: 100%;
+    /* border: 1px solid forestgreen; */
+    padding: 1vh;
+}
+
+div.hero-form>form>div {
+    width: 100%;
+    /* line-height: 6; */
+    margin: 2vh 0;
+}
+
+
+div.hero-form>form>div input {
+    width: 100%;
+    background-color: gainsboro;
+    border: none;
+    padding-left: 20px;
+    height: 8vh;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+input#night:checked ~ footer>div:last-child>div.hero-form>form>div input,
+input#night:checked ~ footer>div:last-child>div.hero-form>form>div textarea {
+    color: gray;
+}
+
+input::placeholder {
+    font-size: 1.2rem;
+}
+
+form>div:first-child{
+    display: flex;
+    gap: 2vh;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 20vh;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid red;
+}
+
+form>div button {
+    float: right;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #8686ff;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 10px;
+}
+
+div.copyright {
+    text-align: center;
+    padding: 7vh 0vw;
+    background-color: gainsboro;
+    color: gray;
+    font-size: 1.2rem;
+}
+
+div.up a img {
+    width: 50px;
+    position: fixed;
+    right: 4vw;
+    bottom: 5vh;
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
+    transform-origin: bottom;
+}
+
+div.up a img:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width:991px){
+    header {
+        background-color: white;
+        height: 9vh;
+        overflow: hidden;
+        transition: all 100ms ease-in-out;
+    }
+    header>div:last-child>label:first-child i {
+        transform: all 400ms ease-in-out;
+    }
+    header>div:last-child {
+        display: flex;
+        gap: 3vw;
+    }
+    header>div:last-child>label:nth-child(2) {
+        display: none;
+    }
+    input#night:checked ~ header>div:last-child>label:first-child i {
+        background-color: black;
+        outline: 5px solid black;
+    }
+    div.logo>h2 {
+        font-size: 1.1rem;
+    }
+    nav.menu {
+        display: none;
+    }
+    nav.side {
+        width: 50vw;
+    }
+    nav.side ul li {
+        font-size: .6rem;
+        line-height: 2;
+    }
+    nav.side ul li:nth-child(2) {
+        font-size: 1.3rem;
+    }
+    nav.side::after {
+        left: -50vw;
+        right: 50vw;
+    }
+    nav.side ul li:first-child {
+        margin: -3vh 10vw 3vh 25vw;
+        padding-left: 11.5vw;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    label>img {
+        display: none;
+    }
+    label>i.fa-moon {
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        background-color: black;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input#night {
+        display: none;
+    }
+    header, section, footer {
+        transition: all 500ms;
+    }
+    input#night:checked a {
+        color: white;
+    }
+    input#night:checked ~ header  {
+        color: white;
+        box-shadow: .5px .5px .5px .5px silver;
+    }
+
+    input#night:checked ~ section {
+        background: black;
+        color: white;
+    }
+    input#night:checked ~ footer {
+        background: black;
+        color: white;
+    }
+    input#night:checked ~ div {
+        background: black;
+        color: white;
+    }
+    input#night:checked ~ div.john {
+        background: black;
+        color: white;
+    }
+    header>div:last-child>label:last-child i {
+        font-size: 1.5rem;
+        display: block;
+        background-color: rgb(250, 91, 33);
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+    nav.menu {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 14vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 1s ease-in-out;
+        font-size: .6rem;
+        font-weight: 900;
+    }
+    nav.menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: -50;
+    }
+    input#nav {
+        display: none;
+    }
+    input#nav:checked ~ header {
+        padding: 4.29vh 4vw 23vh 4vw;
+        top: 0;
+        background-color: gainsboro;
+    }
+    input#night:checked ~ header {
+        background-color: black;
+    }
+    section, header, footer {
+        padding: 3vh 4vw;
+    }
+    section.landing {
+        padding: 20vh 4vw 5vh;
+    }
+    section.service {
+        padding: 15vh 4vw;
+    }
+    section.landing>div p:first-child {
+        font-size: 1.2rem;
+    }
+    section.landing>div:first-child h1 {
+        font-size: 1.1rem;
+        margin: 2vh 0;
+    }
+    section.landing>div:first-child p:nth-child(3) {
+        font-size: .8rem;
+        margin: 1vh 0;
+    }
+    section.landing>div:first-child img {
+        width: 100%;
+    }
+    section.landing>div:last-child p {
+        bottom: -4vh;
+        right: 5vw;
+        transform: rotate(0);
+    }
+    section.landing>div:last-child p i {
+        transform: rotate(0);
+        color: black;
+        cursor: pointer;
+        
+    }
+    section.landing>div:last-child p i:hover {
+        background-color: orangered;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    section.service>div ul {
+        font-size: .8rem;
+    }
+    section.service>div ul li {
+        position: relative;
+    }
+    section.service>div:first-child h1,
+    section.skill>div:last-child>h1,
+    section.award>div div:first-child h1,
+    section.testimony>div:last-child>h1,
+    section.partner>div>div:first-child>h1 {
+        font-size: 1.65rem;
+    }
+    section.service>div:first-child p:nth-child(3),
+    section.skill>div:last-child>p:nth-child(3),
+    section.award>div>div:first-child p:last-child,
+    section.partner>div>div:first-child>p:nth-child(3)  {
+        font-size: .9rem;
+        /* border: 1px solid; */
+    }
+    div.controls {
+        transform: scale(1);
+    }
+    section.skill {
+        gap: 6vh;
+        padding: 10vh 4vw;
+    }
+    section.award {
+        gap: 8vh;
+        padding: 15vh 4vw;
+    }
+    section.award>div div img {
+        width: 80px;
+    }
+    section.award>div>div:not(section.award>div div:first-child) {
+        display: flex;
+        align-items: center;
+    }
+    section.award>div>div>div p:first-child {
+        font-size: .9rem;
+    }
+    section.award>div>div>div p:last-child {
+        font-size: .8rem;
+    }
+    div.clients>div p {
+        font-size: 1.1rem;
+    }
+    section.partner>div {
+        gap: 7vh;
+        padding: 10vh 4vw;
+    }
+    div.collabo>div h1 {
+        font-size: 2rem;
+    }
+    div.collabo>div>div p:first-child {
+        font-size: 1rem;
+    }
+    div.collabo>div>div p:last-child {
+        font-size: .9rem;
+    }
+    section.partner>div>div:last-child img {
+        border-radius: 3px;
+    }
+    footer>div:first-child h1 {
+        font-size: 1.2rem;
+    }
+    div.contact>div:first-child p {
+        font-size: .9rem;
+    }
+    div.contact>div:first-child h3 i {
+        font-size: 2.2rem;
+    }
+    form>div:first-child {
+        flex-direction: column;
+    }
+    div.hero-form>form>div input {
+        height: 6vh;
+        border-radius: 4px;
+    }
+    div.copyright {
+        font-size: .9rem;
+        padding: 3vh 0;
+    }
+    div.hero-form>form>div input {
+        font-size: .9rem;
+    }
+    input::placeholder {
+        font-size: .9rem;
+    }
+    textarea {
+        font-size: .9rem;
+    }
+    form>div button {
+        padding: .5rem 1rem;
+    }
+
+}
+
+@media only screen and (max-width:900px) {
+    div.timi {
+        padding-top: 4vh;
+    }
+}
