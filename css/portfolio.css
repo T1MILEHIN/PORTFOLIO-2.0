@@ -536,7 +536,7 @@ div.copyright {
         position: relative;
         left: 0;
         right: 0;
-        top: 20vh;
+        top: 30vh;
         width: 100%;
         display: block;
         text-align: center;
@@ -554,7 +554,7 @@ div.copyright {
         display: none;
     }
     input#nav:checked ~ header {
-        padding: 4.29vh 4vw 40vh 4vw;
+        padding: 4.29vh 4vw 60vh 4vw;
         top: 0;
         background-color: gainsboro;
     }
