@@ -437,7 +437,7 @@ div.copyright {
 @media only screen and (max-width:991px){
     header {
         background-color: white;
-        height: 9vh;
+        height: 12vh;
         overflow: hidden;
         transition: all 100ms ease-in-out;
         width: 100%;
@@ -536,7 +536,7 @@ div.copyright {
         position: relative;
         left: 0;
         right: 0;
-        top: 14vh;
+        top: 20vh;
         width: 100%;
         display: block;
         text-align: center;
@@ -554,7 +554,7 @@ div.copyright {
         display: none;
     }
     input#nav:checked ~ header {
-        padding: 4.29vh 4vw 23vh 4vw;
+        padding: 4.29vh 4vw 40vh 4vw;
         top: 0;
         background-color: gainsboro;
     }
