@@ -103,19 +103,19 @@ header>div:last-child>label:nth-child(2) {
     font-size: 1.5rem;
     cursor: pointer;
     /* display: none; */
-    
 }
 
 header>div:last-child>label:last-child i {
     display: none;
-    
 }
 
 input#night {
     display: none;
+    transition: all 500ms ease-in-out;
 }
 
 header, section, footer, img,
+section.landing, section.skill, section.testimony
 header>div:last-child>label:first-child i ,
 section.award>div:last-child img:first-child,
 section.skill>div:first-child img,
@@ -133,6 +133,13 @@ footer>div:last-child>div:last-child form>div input,
 footer>div:last-child>div:last-child form>div textarea,
 div.copyright {
     transition: all 400ms ease-in-out;
+}
+
+section.testimony>div:last-child>div>div.john {
+    /* border: 1px solid; */
+    background: white;
+    transition: all 400ms ease-in-out;
+
 }
 
 input#night:checked ~ header {
@@ -188,24 +195,29 @@ input#night:checked ~section.service>div>div:last-child a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 input#night:checked ~section.skill>div:first-child img {
-    background-color: #131617;
+    /* background-color: #131617; */
 }
+
 input#night:checked ~section.award>div:last-child img {
-    background-color: black;
     color: black;
 }
+
 input#night:checked ~section.testimony>div:last-child>div>div {
-    background: #131617;
+    background-color: #131617;
 }
+
 input#night:checked ~ footer {
     background: #131617;
     color: white;
 }
+
 input#night:checked ~ div {
     background: black;
     color: white;
 }
+
 input#night:checked ~ div.john {
     background: black;
     color: white;
@@ -437,7 +449,7 @@ section.skill {
 
 section.skill>div:first-child {
     position: relative;
-    background-color: white;
+    /* background-color: white; */
 }
 
 img.file, img.file1, img.file2 {
@@ -596,8 +608,8 @@ section.award>div:last-child {
 }
 
 section.award>div:last-child img:first-child {
-    width: 100%;
-    background-color: gainsboro;
+    max-width: 100%;
+    background-color: rgba(220, 220, 220, 0);
 }
 
 img.award, img.award1, img.award2 {
@@ -693,7 +705,7 @@ div.julie, div.roy,div.timi, div.laura {
 div.clients>div {
     height: auto;
     background-color: white;
-    transition: all 1s ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 /* div.clients>div:nth-child(4) {
