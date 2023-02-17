@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 9vw;
+    box-shadow: 3px 3px 5px 2px silver;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 99;
+    background-color: white;
+}
+
+header>div {
+    flex: 1;
+}
+
+header>div:last-child {
+    display: flex;
+    gap: 2vw;
+    justify-content: end;
+    align-items: center;
+}
+
+nav.menu ul {
+    white-space: nowrap;
+}
+
+
+nav.menu ul li {
+    display: inline-block;
+    padding: .8rem;
+    position: relative;
+
+}
+
+nav.menu ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: orangered;
+    width: 0px;
+    transition: width 500ms ease-in-out;
+}
+
+nav.menu ul li:hover::after {
+    width: 100%;
+}
+
+nav.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+nav.menu ul li:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: orangered;
+    width: 100%;
+}
+
+input#check:checked ~ header>div:last-child>label>i {
+    color: black;
+    border: 1px solid red;
+}
+
+header>div:last-child>label:first-child i {
+    display: block;
+    font-size: 1.5rem;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+    outline: 5px solid white;
+    outline-offset: -4px;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+input#night:checked ~ header>div:last-child>label:first-child i {
+    color: white;
+    background-color: #131617;
+    outline: 5px solid #131617;
+}
+
+
+header>div:last-child>label:nth-child(2) {
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* display: none; */
+}
+
+header>div:last-child>label:last-child i {
+    display: none;
+}
+
+input#night {
+    display: none;
+    transition: all 500ms ease-in-out;
+}
+
+header, section, footer, img,
+section.landing, section.skill, section.testimony
+header>div:last-child>label:first-child i ,
+section.award>div:last-child img:first-child,
+section.skill>div:first-child img,
+section.testimony>div:last-child>div>div,
+section.landing>div:first-child h1,
+section.landing>div:first-child p:nth-child(3),
+section.service>div:first-child h1,
+section.skill>div:last-child h1,
+section.skill>div:last-child>div.rate>div,
+section.award>div>div:first-child h1,
+section.testimony>div:last-child>h1,
+section.partner>div>div:first-child>h1,
+footer>div:first-child h1,
+footer>div:last-child>div:last-child form>div input,
+footer>div:last-child>div:last-child form>div textarea,
+section.work>div>div.port>div,
+section.text>div h1 ,
+section.work,
+div.copyright {
+    transition: all 400ms ease-in-out;
+}
+
+section.testimony>div:last-child>div>div.john {
+    /* border: 1px solid; */
+    background: white;
+    transition: all 400ms ease-in-out;
+
+}
+
+input#night:checked ~ header {
+    background: #131617;
+    color: white;
+    box-shadow: .5px .5px .5px .5px silver;
+}
+
+input#night:checked ~header>div nav.menu ul li {
+    background-color: rgb(255, 255, 255);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+input#night:checked ~ section.landing,
+input#night:checked ~ section.skill,
+input#night:checked ~ section.testimony {
+    background: #131617;
+    color: white;
+}
+
+input#night:checked ~ section {
+    background-color: black;
+    color: white;
+}
+
+input#night:checked ~ section.landing>div:first-child h1,
+input#night:checked ~ section.landing>div:first-child p:nth-child(3),
+input#night:checked ~ section.service>div:first-child h1, 
+input#night:checked ~ section.skill>div:last-child h1, 
+input#night:checked ~ section.award>div>div:first-child h1,
+input#night:checked ~ section.testimony>div:last-child>h1,
+input#night:checked ~ section.partner>div>div:first-child>h1,
+input#night:checked ~ footer>div:first-child h1 {
+    color: white;
+}
+
+input#night:checked ~ footer>div:last-child>div:last-child form>div input,
+input#night:checked ~ footer>div:last-child>div:last-child form>div textarea {
+    background-color: #0b0d0e;
+} 
+
+input#night:checked ~section.landing>div:last-child p,
+input#night:checked ~section.landing>div:last-child p i  {
+    background-color: orangered;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+input#night:checked ~section.service>div>div:last-child a {
+    background-color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+input#night:checked ~section.skill>div:first-child img {
+    /* background-color: #131617; */
+}
+
+input#night:checked ~section.award>div:last-child img {
+    color: black;
+}
+
+input#night:checked ~section.testimony>div:last-child>div>div {
+    background-color: #131617;
+}
+
+input#night:checked ~ footer {
+    background: #131617;
+    color: white;
+}
+
+input#night:checked ~ div {
+    background: black;
+    color: white;
+}
+
+input#night:checked ~ div.john {
+    background: black;
+    color: white;
+}
+
+input#night:checked ~ nav.side {
+    color: black;
+}
+
+nav.side {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    width: 30vw;
+    height: 100vh;
+    text-align: left;
+    padding: 5%;
+    background-color: gainsboro;
+}
+
+
+nav.side ul li {
+    font-size: 1.3rem;
+}
+
+nav.side::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 30vw;
+    bottom: -20vw;
+    left: -68.75vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all 100ms ease-in-out;
+}
+
+nav.side>ul {
+    list-style: none;
+}
+
+input#check, input#nav {
+    display: none;
+}
+
+input#check:checked ~ nav.side {
+    right: 0;
+}
+
+nav.side ul li img {
+    width: 20vw;
+}
+
+nav.side ul li:first-child {
+    margin: -11vh 0 1vh 14.5vw;
+    font-size: 3rem;
+    cursor: pointer;
+    float: right;
+}
+
+nav.side ul li:first-child label {
+    cursor: pointer;
+}
+
+nav.side ul li:nth-child(2) {
+    font-size: 2.5rem;
+}
+
+nav.side ul li:last-child {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin: 2vh 0;
+    font-size: 3rem;
+    color: orangered;
+}
+
+section.text>div {
+    padding: 20vh 0 1vh 0;
+    text-align: center;
+}
+
+section.text>div p {
+    color: orangered;
+    font-size: 1.2rem;
+}
+
+section.text>div h1 {
+    color: rgb(37, 37, 87);
+    font-size: 2rem;
+}
+
+section.work {
+    padding: 0 0 5vh 0;
+}
+
+div.port {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* border: 3px solid blue; */
+    width: 300vw;
+    position: relative;
+}
+
+div.port>div {
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    gap: 3vw;
+    width: 100vw;
+    padding: 5vw 5vw;
+    transition: all 500ms ease-in-out;
+    background-color: white;
+}
+
+div.port>div>div {
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+div.port>div>div:hover {
+    transform: scale(1.15);
+}
+
+div.port>div img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    /* border: 1px solid green; */
+}
+
+div.slide2, div.slide3 {
+    position: absolute;
+    right: 100vw;
+    z-index: 3;
+}
+
+div.label {
+    /* border: 1px solid yellowgreen; */
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh 0;
+}
+
+div.label>label {
+    width: 20px;
+    height: 20px;
+    background-color: gainsboro;
+    border-radius: 50%;
+}
+
+div.label>label:hover {
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.5) inset,
+    0px 0px 0px 3px white;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input#radio2:checked ~ div.slide2 {
+    right: 200vw;
+}
+
+input#radio3:checked ~ div.slide3 {
+    right: 200vw;
+}
+
+input#night:checked ~ section.work {
+    background-color: black;
+}
+
+input#night:checked ~ section.text>div h1 {
+    color: white;
+}
+
+input#night:checked ~ section.work>div>div.port>div {
+    background-color: black;
+}
+
+input#night:checked ~ div.copyright {
+    background-color: #131617;
+}
+
+div.copyright {
+    text-align: center;
+    padding: 7vh 0vw;
+    background-color: gainsboro;
+    color: gray;
+    font-size: 1.2rem;
+}
+
+div.up a img {
+    width: 50px;
+    position: fixed;
+    right: 4vw;
+    bottom: 5vh;
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
+    transform-origin: bottom;
+}
+
+@media only screen and (max-width:991px){
+    header {
+        background-color: white;
+        height: 9vh;
+        overflow: hidden;
+        transition: all 100ms ease-in-out;
+    }
+    header>div:last-child>label:first-child i {
+        transform: all 400ms ease-in-out;
+    }
+    header>div:last-child {
+        display: flex;
+        gap: 3vw;
+    }
+    header>div:last-child>label:nth-child(2) {
+        display: none;
+    }
+    input#night:checked ~ header>div:last-child>label:first-child i {
+        background-color: black;
+        outline: 5px solid black;
+    }
+    div.logo>h2 {
+        font-size: 1.1rem;
+    }
+    nav.menu {
+        display: none;
+    }
+    nav.side {
+        width: 50vw;
+    }
+    nav.side ul li {
+        font-size: .6rem;
+        line-height: 2;
+    }
+    nav.side ul li:nth-child(2) {
+        font-size: 1.3rem;
+    }
+    nav.side::after {
+        left: -50vw;
+        right: 50vw;
+    }
+    nav.side ul li:first-child {
+        margin: -3vh 10vw 3vh 25vw;
+        padding-left: 11.5vw;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    label>img {
+        display: none;
+    }
+    label>i.fa-moon {
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        background-color: black;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input#night {
+        display: none;
+    }
+    header, section, footer {
+        transition: all 500ms;
+    }
+    input#night:checked a {
+        color: white;
+    }
+    input#night:checked ~ header  {
+        color: white;
+        box-shadow: .5px .5px .5px .5px silver;
+    }
+
+    input#night:checked ~ section {
+        background: black;
+        color: white;
+    }
+    input#night:checked ~ footer {
+        background: black;
+        color: white;
+    }
+    input#night:checked ~ div {
+        background: black;
+        color: white;
+    }
+    input#night:checked ~ div.john {
+        background: black;
+        color: white;
+    }
+    header>div:last-child>label:last-child i {
+        font-size: 1.5rem;
+        display: block;
+        background-color: rgb(250, 91, 33);
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+    nav.menu {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 14vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 1s ease-in-out;
+        font-size: .6rem;
+        font-weight: 900;
+    }
+    nav.menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: -50;
+    }
+    input#nav {
+        display: none;
+    }
+    input#nav:checked ~ header {
+        padding: 4.29vh 4vw 23vh 4vw;
+        top: 0;
+        background-color: gainsboro;
+    }
+    input#night:checked ~ header {
+        background-color: black;
+    }
+    section, header, footer {
+        padding: 3vh 4vw;
+    }
+    section.landing {
+        padding: 20vh 4vw 5vh;
+    }
+    section.service {
+        padding: 15vh 4vw;
+    }
+    section.landing>div p:first-child {
+        font-size: 1.2rem;
+    }
+    section.landing>div:first-child h1 {
+        font-size: 1.1rem;
+        margin: 2vh 0;
+    }
+    section.landing>div:first-child p:nth-child(3) {
+        font-size: .8rem;
+        margin: 1vh 0;
+    }
+
+
+}

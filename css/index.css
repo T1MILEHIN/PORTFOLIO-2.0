@@ -74,6 +74,16 @@ nav.menu ul li a {
     font-weight: 600;
 }
 
+nav.menu ul li:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: orangered;
+    width: 100%;
+}
+
 input#check:checked ~ header>div:last-child>label>i {
     color: black;
     border: 1px solid red;
@@ -971,7 +981,7 @@ div.up a img:hover {
 @media only screen and (max-width:991px){
     header {
         background-color: white;
-        height: 9vh;
+        height: 12vh;
         overflow: hidden;
         transition: all 100ms ease-in-out;
     }
@@ -1070,7 +1080,7 @@ div.up a img:hover {
         position: relative;
         left: 0;
         right: 0;
-        top: 14vh;
+        top: 20vh;
         width: 100%;
         display: block;
         text-align: center;
@@ -1088,7 +1098,7 @@ div.up a img:hover {
         display: none;
     }
     input#nav:checked ~ header {
-        padding: 4.29vh 4vw 23vh 4vw;
+        padding: 8vh 4vw 40vh 4vw;
         top: 0;
         background-color: gainsboro;
     }
