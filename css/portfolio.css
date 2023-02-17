@@ -334,9 +334,11 @@ div.port {
     justify-content: start;
     align-items: center;
     /* border: 3px solid blue; */
-    width: 300vw;
+    /* width: 300vw; */
     position: relative;
+    overflow: hidden;
 }
+
 
 div.port>div {
     /* border: 2px solid red; */
@@ -368,8 +370,9 @@ div.port>div img {
 
 div.slide2, div.slide3 {
     position: absolute;
-    right: 100vw;
+    left: 110vw;
     z-index: 3;
+    /* border: 5px solid green; */
 }
 
 div.label {
@@ -400,11 +403,11 @@ input[type="radio"]{
 }
 
 input#radio2:checked ~ div.slide2 {
-    right: 200vw;
+    left: 0vw;
 }
 
 input#radio3:checked ~ div.slide3 {
-    right: 200vw;
+    left: 0vw;
 }
 
 input#night:checked ~ section.work {
@@ -425,20 +428,10 @@ input#night:checked ~ div.copyright {
 
 div.copyright {
     text-align: center;
-    padding: 7vh 0vw;
+    padding: 5vh 0vw;
     background-color: gainsboro;
     color: gray;
     font-size: 1.2rem;
-}
-
-div.up a img {
-    width: 50px;
-    position: fixed;
-    right: 4vw;
-    bottom: 5vh;
-    cursor: pointer;
-    transition: transform 100ms ease-in-out;
-    transform-origin: bottom;
 }
 
 @media only screen and (max-width:991px){
@@ -447,6 +440,8 @@ div.up a img {
         height: 9vh;
         overflow: hidden;
         transition: all 100ms ease-in-out;
+        width: 100%;
+        /* border: 1px solid; */
     }
     header>div:last-child>label:first-child i {
         transform: all 400ms ease-in-out;
@@ -481,6 +476,7 @@ div.up a img {
     nav.side::after {
         left: -50vw;
         right: 50vw;
+        display: none;
     }
     nav.side ul li:first-child {
         margin: -3vh 10vw 3vh 25vw;
@@ -526,10 +522,7 @@ div.up a img {
         background: black;
         color: white;
     }
-    input#night:checked ~ div.john {
-        background: black;
-        color: white;
-    }
+
     header>div:last-child>label:last-child i {
         font-size: 1.5rem;
         display: block;
@@ -571,23 +564,13 @@ div.up a img {
     section, header, footer {
         padding: 3vh 4vw;
     }
-    section.landing {
-        padding: 20vh 4vw 5vh;
+    div.copyright>p {
+        font-size: .7rem;
     }
-    section.service {
-        padding: 15vh 4vw;
+    div.port>div>div:hover {
+        transform: scale(1);
     }
-    section.landing>div p:first-child {
-        font-size: 1.2rem;
-    }
-    section.landing>div:first-child h1 {
-        font-size: 1.1rem;
-        margin: 2vh 0;
-    }
-    section.landing>div:first-child p:nth-child(3) {
-        font-size: .8rem;
-        margin: 1vh 0;
-    }
+    
 
 
 }
