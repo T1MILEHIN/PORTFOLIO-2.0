@@ -702,7 +702,7 @@ div.clients {
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    max-height: 60.7vh;
+    max-height: 70.7vh;
     overflow: hidden;
     position: relative;
 }
@@ -981,9 +981,9 @@ div.up a img:hover {
 @media only screen and (max-width:991px){
     header {
         background-color: white;
-        height: 12vh;
         overflow: hidden;
-        transition: all 100ms ease-in-out;
+        padding: 2vh 2vh;
+        transition: all 400ms ease-in-out;
     }
     header>div:last-child>label:first-child i {
         transform: all 400ms ease-in-out;
@@ -1077,10 +1077,10 @@ div.up a img:hover {
         cursor: pointer;
     }
     nav.menu {
-        position: relative;
+        position: absolute;
         left: 0;
         right: 0;
-        top: 20vh;
+        top: 80px;
         width: 100%;
         display: block;
         text-align: center;
@@ -1098,14 +1098,13 @@ div.up a img:hover {
         display: none;
     }
     input#nav:checked ~ header {
-        padding: 8vh 4vw 40vh 4vw;
-        top: 0;
+        padding-bottom: 150px;
         background-color: gainsboro;
     }
     input#night:checked ~ header {
         background-color: black;
     }
-    section, header, footer {
+    section, footer {
         padding: 3vh 4vw;
     }
     section.landing {
