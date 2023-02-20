@@ -439,7 +439,7 @@ div.copyright {
         height: 9vh;
         overflow: hidden;
         transition: all 100ms ease-in-out;
-        padding: 2px 2vw;
+        padding: 2vh 2vw;
     }
     header>div:last-child>label:first-child i {
         transform: all 400ms ease-in-out;
@@ -552,7 +552,7 @@ div.copyright {
         display: none;
     }
     input#nav:checked ~ header {
-        padding-bottom: 150px;
+        padding-bottom: 200px;
         background-color: gainsboro;
     }
     input#night:checked ~ header {
