@@ -655,7 +655,7 @@ section.testimony {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 4vw;
-    padding: 15vh 9vw;
+    padding: 15vh 9vw 3vh 9vw;
     align-items: center;
 }
 
@@ -782,6 +782,28 @@ input#radio4:checked ~ div.timi {
 
 input#radio5:checked ~ div.laura {
     bottom: 0;
+}
+
+div.review {
+    text-align: center;
+    padding: 2vh 0;
+}
+
+div.review button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 20px;
+    text-transform: capitalize;
+    background-color: gainsboro;
+    cursor: pointer;
+    font-weight: 900;
+    transition: all 500ms ease-in-out;
+    box-shadow: .5px .5px 2px 2px black;
+}
+
+div.review button:hover {
+    background-color: rgb(255, 255, 255);
 }
 
 section.partner {

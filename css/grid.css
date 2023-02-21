@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(68, 67, 67);
+    background-size: 400%;
+    background-position: left;
+    /* animation-name: diff;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; */
+}
+
+@keyframes diff {
+    0% {background-position: left;}
+    50% {background-position: right;}
+    100% {background-position: left;}
+}
+
+div.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+div.heading h1 {
+    color: whitesmoke;
+}
+
+div.heading h2 {
+    font-size: 3rem;
+    background-image: linear-gradient(to right, rgb(1, 225, 255), rgb(6, 199, 6), rgb(0, 102, 255), rgb(12, 124, 124), rgb(27, 31, 252));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: left;
+    animation-name: change;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change {
+    0% {background-position: left;}
+    25% {background-position: center;}
+    50% {background-position: right;}
+    75% {background-position: center;}
+    100% {background-position: left;}
+}
+
+span {
+    color: rgb(24, 24, 216);
+}
+
+div.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 2fr));
+    /* grid-template-columns: repeat(12, 2fr); */
+    /* grid-template-rows: repeat(12, 2fr); */
+    padding: 3%;
+    row-gap: 4vh;
+    column-gap: 4vh;
+}
+
+div.grid>div:nth-child(2){
+    grid-row: span 2;
+    /* border: 5px solid blue; */
+}
+
+div.grid>div:nth-child(4){
+    grid-row: span 2;
+    /* border: 5px solid red; */
+}
+
+div.grid>div:nth-child(7){
+    /* border: 5px solid gold; */
+    grid-row: span 2;
+}
+
+div.grid>div {
+    background-color: rgb(34, 34, 34);
+    color: whitesmoke;
+    padding: 1rem;
+    border-radius: 20px;
+    grid-column: span 4;
+    height: auto;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+    overflow: hidden;
+}
+
+div.grid>div>div {
+    transform: translateX(800px);
+    transition: all 1s ease-in-out;
+}
+
+h6 {
+    transition: all .7s ease-in-out;
+    opacity: 0;
+}
+
+div.grid>div:hover{
+    /* transform: scale(1.05); */
+    transform-origin: center;
+}
+
+div.grid>div:hover  div.slide{
+    transform: translateX(0);
+}
+
+div.grid>div:hover h6 {
+    opacity: 1;
+}
+
+div.grid>div img {
+    width: 50px;
+}
+
+div.grid>div>div {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin: 2vh 0;
+}
+
+h6 {
+    margin: 1vh 0;
+    letter-spacing: 3px;
+}
+
+h6 sup {
+    font-size: 1.6rem;
+}
+
+div.back {
+    text-align: center;
+    padding: 2vh 0;
+}
+
+div.back button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 20px;
+    text-transform: capitalize;
+    background-color: gainsboro;
+    cursor: pointer;
+    font-weight: 900;
+    transition: all 500ms ease-in-out;
+}
+
+div.back button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+
+@media only screen and (max-width:800px) {
+    div.heading h1 {
+        font-size: 1.3rem;
+    }
+    div.heading h2 {
+        font-size: 1.2rem;
+    }
+}
