@@ -784,9 +784,15 @@ input#radio5:checked ~ div.laura {
     bottom: 0;
 }
 
+input#night:checked ~ div.review {
+    background-color: #131617;
+}
+
 div.review {
     text-align: center;
     padding: 2vh 0;
+    background-color: white;
+    transition: all 400ms ease-in-out;
 }
 
 div.review button {
@@ -804,6 +810,7 @@ div.review button {
 
 div.review button:hover {
     background-color: rgb(255, 255, 255);
+    box-shadow: none;
 }
 
 section.partner {
@@ -1215,6 +1222,10 @@ div.up a img:hover {
     section.partner>div {
         gap: 7vh;
         padding: 10vh 4vw;
+    }
+
+    div.review button {
+        font-size: .7rem;
     }
     div.collabo>div h1 {
         font-size: 2rem;
