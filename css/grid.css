@@ -7,14 +7,14 @@
 }
 
 body {
-    background-image: linear-gradient(to right, rgb(68, 67, 67), rgb(73, 73, 73), gainsboro);
-    background-size: 400%;
+    background-color: rgb(68, 67, 67);
+    /* background-size: 400%;
     background-position: left;
     animation-name: diff;
     animation-duration: 300s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
+    animation-direction: alternate-reverse; */
 }
 
 @keyframes diff {
